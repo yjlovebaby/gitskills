@@ -1,0 +1,15 @@
+
+    }
+    public int getWindowWidth() {
+        DisplayMetrics dm = new DisplayMetrics();
+        dm = getContext().getResources().getDisplayMetrics();
+        if (dm == null)
+            return 0;
+        return dm.widthPixels;
+    }
+    public void initView()
+    {
+        RelativeLayout rootLayout= (RelativeLayout) findViewById(R.id.dialog_join_shoppingcar);
+        rootLayout.setLayoutParams(new FrameLayout.LayoutParams(getWindowWidth(),FrameLayout.LayoutParams.MATCH_PARENT));
+
+    }
